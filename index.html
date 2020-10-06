@@ -120,23 +120,21 @@
         padding-top: 1em;
       }
 
+      // Poner imagen redonda al 50% de su tamaño
       .image-50 img {width: 50%; border-radius: 50%;}
 
-      /* Two-column layouts */
-      .left-column  { width: 49%; float: left; }
-      .right-column { width: 49%; float: right; }
-
-      .left-column-33  { width: 33%; float: left; }
-      .right-column-66 { width: 66%; float: right; }
-
-      .left-column-66  { width: 66%; float: left; }
-      .right-column-33 { width: 33%; float: right; }
-
-      .right-column ~ p { clear: both; }
-      .right-column ~ ul { clear: both; }
-
+      .xlarge { font-size: 150% }
       .large { font-size: 130% }
       .small { font-size: 70% }
+
+      .table-center {
+        width:100%;
+        height:100%;
+      }
+
+      table {
+        margin: 0 auto; /* or margin: 0 auto 0 auto */
+      }
 
     </style>
   </head>
@@ -145,36 +143,35 @@
 
 class: center, middle
 
+![](img/av.png)
 # Resumen acerca de simuladores y prototipos para Autonomous Vehicles
 
 ---
 
 # Índice
-
+.xlarge[
 1. Introducción
 2. Simuladores
 3. Prototipos RC
-
+]
 ---
 
 # 1. Introducción
 
 
 ---
-
-class: center, middle
-
 # 2. Simuladores
 
 .large[
-.right-column-66[
+.table-center[
+
 |        |
 |:-----------------:|
 | Ansys VRXperience |
 | Apollo Simulation |
 |  Applied Intution |
 |      Autoware     |
-|       Carla       |
+|       CARLA       |
 |      CarMaker     |
 |       Carsim      |
 |      Cognata      |
@@ -185,23 +182,24 @@ class: center, middle
 | NVIDIA Driveworks |
 |      Prescan      |
 |       rFPro       |
+
 ]
 ]
 
 ---
 
-class: center, middle
-
 # 2. Simuladores
 
-.right-column-66[
+.large[
+.table-center[
+
 |        |
 |:-----------------:|
 | ~~Ansys VRXperience~~ |
 | Apollo Simulation |
 |  ~~Applied Intution~~ |
 |      Autoware     |
-|       Carla       |
+|       CARLA       |
 |      ~~CarMaker~~     |
 |       ~~Carsim~~     |
 |      ~~Cognata~~      |
@@ -212,22 +210,26 @@ class: center, middle
 | ~~NVIDIA Driveworks~~ |
 |      ~~Prescan~~      |
 |       ~~rFPro~~       |
+
+]
 ]
 
 ---
 
-class: center, middle
-
 # 2. Simuladores
 
-.right-column-66[
+.table-center[
+.xlarge[
+
 |        |
 |:-----------------:|
 | Apollo Simulation |
 |      Autoware     |
-|       Carla       |
+|       CARLA       |
 | LGSVL Simulator   |
 |  Microsoft AirSim |
+
+]
 ]
 
 ---
@@ -235,19 +237,33 @@ class: center, middle
 # 2. Simuladores
 ## Apollo Simulation
 
+
+---
+# 2. Simuladores
+## Autoware
+
+
+---
+# 2. Simuladores
+## CARLA
+
+---
+# 2. Simuladores
+## LGSVL Simulator
+
 .right-column-66[
 |        |
 |:-----------------:|
 | Apollo Simulation |
 |      Autoware     |
 |       Carla       |
-| LGSVL Simulator   |
+|    |
 |  Microsoft AirSim |
 ]
 
 ---
-
-# Looking for automation
+# 2. Simuladores
+## Microsoft AirSim
 
 ---
 
