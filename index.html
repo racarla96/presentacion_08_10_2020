@@ -30,10 +30,13 @@
       li p { line-height: 1.25em; }
       .red { color: #fa0000; }
       .large { font-size: 2em; }
+
+      /* LINK / URL COLOR! */
       a, a > code {
         color: rgb(249, 38, 114);
         text-decoration: none;
       }
+
       code {
         background: #e7e8e2;
         border-radius: 5px;
@@ -120,7 +123,7 @@
         padding-top: 1em;
       }
 
-      // Poner imagen redonda al 50% de su tamaño
+      /* Poner imagen redonda al 50% de su tamaño */
       .circle{
         display: block;
         overflow: hidden;
@@ -139,8 +142,20 @@
       .large { font-size: 130%; }
       .small { font-size: 70%; }
 
-      .borders {
-        border: 1px solid black;
+      table{
+        margin: 0 auto;
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      .pure-table{
+        border: 0px;
+      }
+
+      .pad{
+        margin-bottom: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
       }
 
     </style>
@@ -159,6 +174,7 @@ class: center, middle
 1. Introducción
 2. Simuladores
 3. Prototipos RC
+4. MATLAB y ROS
 ]
 ---
 
@@ -260,41 +276,98 @@ Todos ellos se caracterizan por ser Open-Source
 # 2. Simuladores
 ## [Apollo Simulation](https://apollo.auto/platform/simulation.html)
 
+Apollo Simulation permite a los usuarios agregar sus propios algoritmos para ciertos módulos, p. ej. planificación de movimiento.
+
+Los usuarios pueden suscribirse a los mensajes publicados por el servicio de simulación como entrada a sus propios algoritmos.
+
+- Basado en mensajes
+- Módular
+
+.pad.pure-table[
+
+|             Soporte                            ||
+|:-------------------------------:|:-------------:|
+| Lenguajes de<br>programación .red.bold[*]  | C++, Python   |
+| Robot Operating System<br>(ROS) | No            |
+| MATLAB - Simulink               | No            |
+
+]
+
+.footnote[.red.bold[*] Apollo Cyber RT y Cloud Platform]
+
+
+???
+
 ---
 # 2. Simuladores
 ## [Autoware](https://www.autoware.org/)
+
+.pad.pure-table[
+
+|             Soporte                            ||
+|:-------------------------------:|:-------------:|
+| Lenguajes de<br>programación    | C++, Python   |
+| Robot Operating System<br>(ROS) | ROS v1 y v2   |
+| MATLAB - Simulink               | No            |
+
+]
 
 ---
 # 2. Simuladores
 ## [LGSVL Simulator](https://www.lgsvlsimulator.com/)
 
+.pad.pure-table[
+
+|             Soporte                            ||
+|:-------------------------------:|:-------------:|
+| Lenguajes de<br>programación    | C++, Python   |
+| Robot Operating System<br>(ROS) | ROS v1 Bridge |
+| MATLAB - Simulink               | No            |
+
+]
+
 ---
 # 2. Simuladores
 ## [CARLA](https://carla.org/)
 
-CARLA se ha desarrollado desde cero para respaldar el desarrollo, la formación y la validación de sistemas de conducción autónomos.
+CARLA permite el desarrollo, la formación y la validación de sistemas de conducción autónomos.
 
-Además del código y los protocolos Open-Source, CARLA proporciona assets digitales abiertos (diseños urbanos, edificios, vehículos)
-que se crearon para este propósito y se pueden utilizar libremente. La plataforma de simulación admite especificaciones flexibles
-de conjuntos de sensores, condiciones ambientales, control total de todos los actores estáticos y dinámicos, generación de mapas y mucho más.
+- Open-Source
+- Assets digitales abiertos (diseños urbanos, edificios, vehículos)
+- Dispone de un onjuntos de sensores para el coche
+- Condiciones ambientales variables
+- Control total de todos los actores estáticos y dinámicos
+- Generación de mapas
 
-.borders[
 
-|             Soporte             |             |
-|:-------------------------------:|-------------|
-| Lenguajes de<br>programación    | C++, Python |
-| Robot Operating System<br>(ROS) | ROS1 Bridge |
-| MATLAB - Simulink               | No          |
+.pad.pure-table[
+
+|             Soporte                            ||
+|:-------------------------------:|:-------------:|
+| Lenguajes de<br>programación    | C++, Python   |
+| Robot Operating System<br>(ROS) | ROS v1 Bridge |
+| MATLAB - Simulink               | No            |
 
 ]
 
 ???
 
-
+Un asset es una representación de cualquier item que puede ser utilizado en su juego o proyecto.
+Un asset podría venir de un archivo creado afuera de Unity, tal como un modelo 3D, un archivo de audio, una imagen, o cualquiera de los otros tipos de archivos que soporta el motor gráfico.
 
 ---
 # 2. Simuladores
 ## [Microsoft AirSim](https://microsoft.github.io/AirSim/)
+
+.pad.pure-table[
+
+|             Soporte                            ||
+|:-------------------------------:|:-------------:|
+| Lenguajes de<br>programación    |  C++, Python, C#, Java   |
+| Robot Operating System<br>(ROS) | ROS v1 wrapper |
+| MATLAB - Simulink               | No             |
+
+]
 
 ---
 
@@ -327,6 +400,11 @@ Este paper es una sintesis de porque usar simuladores y un resumen de todos los 
 Este paper da un visión más amplia de la tecnología y la industria en el mundo de los coche autonomos.
 ---
 
+# Enlaces de interés
+- [Curso gratuito autoware](https://www.apex.ai/autoware-course)
+
+---
+
 
 class: center, middle
 
@@ -345,6 +423,9 @@ Rafael Carbonell Lázaro
     <script type="text/javascript">
       var slideshow = remark.create();
     </script>
+
+<!-- TABLES STYLE -->
+<link rel="stylesheet" href="https://racarla96.github.io/presentacion_08_10_2020/pure-min.css">
 
 <!-- SLIDES CORNER LOGO -->
     <style>
