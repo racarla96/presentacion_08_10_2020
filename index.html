@@ -33,17 +33,27 @@
         margin-inline-end: 0px;
       }
 
+      div {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
       p {
           display: block;
-          margin-block-start: 0.2em;
-          margin-block-end: 0.2em;
+          margin-block-start: 0.4em;
+          margin-block-end: 0.4em;
           margin-inline-start: 0px;
           margin-inline-end: 0px;
       }
 
       ol {
-          margin-block-start: 0.2em !important;
-          margin-block-end: 0.2em !important;
+          margin-block-start: 0.3em !important;
+          margin-block-end: 0.3em !important;
+      }
+
+      ul {
+          margin-block-start: 0.3em !important;
+          margin-block-end: 0.3em !important;
       }
 
       .remark-slide-content h1 { font-size: 3em; }
@@ -219,8 +229,7 @@ class: center, middle
 ---
 # 2. Simuladores
 
-.large[
-.center[
+.large.center[
 
 Ansys VRXperience<br>
 Apollo Simulation<br>
@@ -239,12 +248,11 @@ Prescan<br>
 rFPro
 
 ]
-]
 
 ???
 
 En el mercado hay distintos simuladores existentes,
-aquí tenemos 15 de los simuladores de coches autonomos existentes,
+aquí tenemos 15 de los simuladores de coches autónomos existentes,
 incluso debe haber alguno más.
 
 Teniendo en cuenta el tiempo limitado para la realización y no pudiendo
@@ -264,8 +272,7 @@ Por último, Ansys y Carsim son dos simuladores que destacan por su alto grado d
 
 # 2. Simuladores
 
-.large[
-.center[
+.large.center[
 
 ~~Ansys VRXperience~~<br>
 Apollo Simulation<br>
@@ -284,14 +291,12 @@ Microsoft AirSim<br>
 ~~rFPro~~<br>
 
 ]
-]
 
 ---
 
 # 2. Simuladores
 
-.center[
-.xlarge[
+.center.xlarge[
 
 Apollo Simulation<br>
 Autoware<br>
@@ -299,7 +304,6 @@ CARLA<br>
 LGSVL Simulator<br>
 Microsoft AirSim<br>
 
-]
 ]
 
 ???
@@ -314,9 +318,6 @@ Todos ellos se caracterizan por ser Open-Source
 Apollo Simulation permite a los usuarios agregar sus propios algoritmos para ciertos módulos, p. ej. planificación de movimiento.
 
 Los usuarios pueden suscribirse a los mensajes publicados por el servicio de simulación como entrada a sus propios algoritmos.
-
-- Basado en mensajes
-- Módular
 
 .pad.pure-table[
 
@@ -334,8 +335,50 @@ Los usuarios pueden suscribirse a los mensajes publicados por el servicio de sim
 ???
 
 ---
+
+# 2. Simuladores
+## [Apollo Simulation](https://apollo.auto/platform/simulation.html)
+- **Escenarios:** alrededor de 200 casos de uso o puedes diseñar tu propio caso de uso.
+
+- **Modos de ejecución**
+  * Admite la ejecución de múltiples escenarios al mismo tiempo con alta eficiencia.
+  * Admite la verificación de uno o más módulos en el entorno Apollo.
+
+- **Sistema automatico de evaluación:** Esto permite hacer test automatizados
+  * Detección de colisiones
+  * Detección de infracción por semaforo en rojo
+  * Detección de exceso de velocidad
+  * 12 en total
+
+- **Entorno de visualización en 3D**
+
+???
+
+Sistema automatico de evaluación:
+  * Detección de colisiones
+  * Detección de infracción por semaforo en rojo
+  * Detección de exceso de velocidad
+  * Detección todoterreno
+  * Prueba de llegada
+  * Detección de frenado brusco
+  * Prueba de aceleración
+  * Prueba de enrutamiento
+  * Cambio de carril en la detección de cruces
+  * Ceda el paso a los peatones en los cruces peatonales
+  * Prueba de frenado
+  * Detente en las señales de alto
+
+---
 # 2. Simuladores
 ## [Autoware](https://www.autoware.org/)
+
+La **Fundación Autoware** es una organización sin fines de lucro que apoya proyectos de código abierto que permiten la movilidad autónoma.
+
+**Autoware** tiene **tres proyectos** principales:
+  * **.AI** es un **proyecto inicial** desarrollado en **ROS1**.
+  * **.Auto** es la **evolución de .AI** a **ROS2** y mejoras de software.
+  * .IO es un proyecto de interfaz para Autoware que se ampliará con software propietario y bibliotecas de terceros de forma fiable.
+
 
 .pad.pure-table[
 
@@ -349,7 +392,34 @@ Los usuarios pueden suscribirse a los mensajes publicados por el servicio de sim
 
 ---
 # 2. Simuladores
+## [Autoware.AI](https://www.autoware.ai/) y [Autoware.Auto](https://www.autoware.auto/)
+
+Autoware.AI - **"todo en uno"** para la conducción autónoma.
+
+* **Localización:** Mapas 3D y algoritmos SLAM en combinación con sensores GNSS e IMU.
+
+* **Detección:** cámaras y LiDAR con algoritmos de fusión de sensores y redes neuronales profundas.
+
+* **Predicción y Planificación:** robótica probabilística, sistemas basados en reglas y redes neuronales profundas.
+
+* **Control:** La salida de Autoware al vehículo es un giro de velocidad y velocidad angular.
+
+Todos estos elementos también los podemos encontrar en **.Auto**
+
+---
+# 2. Simuladores
 ## [LGSVL Simulator](https://www.lgsvlsimulator.com/)
+
+LG Electronics America R&D Center ha desarrollado un simulador
+de vehículos autónomos basado en Unity para desarrolladores de vehículos autónomos.
+
+* Solución lista para centrarse en probar sus algoritmos.
+
+* Integración con las plataformas **Autoware** de TierIV y **Apollo 5.0** y **Apollo 3.0** de Baidu. (Forks)
+
+* Se pueden generar mapas HD
+
+* Un sistema completo con poca necesidad de integraciones personalizadas.
 
 .pad.pure-table[
 
@@ -367,13 +437,15 @@ Los usuarios pueden suscribirse a los mensajes publicados por el servicio de sim
 
 CARLA permite el desarrollo, la formación y la validación de sistemas de conducción autónomos.
 
-- Open-Source
-- Assets digitales abiertos (diseños urbanos, edificios, vehículos)
-- Dispone de un onjuntos de sensores para el coche
-- Condiciones ambientales variables
-- Control total de todos los actores estáticos y dinámicos
-- Generación de mapas
+* Assets digitales abiertos (diseños urbanos, edificios, vehículos)
 
+* Dispone de un conjuntos de sensores para el coche
+
+* Condiciones ambientales variables
+
+* Control total de todos los actores estáticos y dinámicos
+
+* Generación de mapas
 
 .pad.pure-table[
 
@@ -393,6 +465,16 @@ Un asset podría venir de un archivo creado afuera de Unity, tal como un modelo 
 ---
 # 2. Simuladores
 ## [Microsoft AirSim](https://microsoft.github.io/AirSim/)
+
+AirSim es un simulador de drones, automóviles y más, construido sobre Unreal Engine.
+
+El objetivo de la plataforma es la investigación de algorimos de IA
+
+ * Aprendizaje profundo
+ 
+ * Visión por computadora
+
+ * Aprendizaje por refuerzo
 
 .pad.pure-table[
 
@@ -432,7 +514,7 @@ Este paper es una sintesis de porque usar simuladores y un resumen de todos los 
 
 ???
 
-Este paper da un visión más amplia de la tecnología y la industria en el mundo de los coche autonomos.
+Este paper da un visión más amplia de la tecnología y la industria en el mundo de los coche autónomos.
 ---
 
 # Enlaces de interés
