@@ -23,12 +23,14 @@
 
       h1 {
         margin-block-start: 0.9em !important;;
-        margin-bottom: 0.1em !important;
+        margin-bottom: 0.2em !important;
       }
 
       h2 {
-        margin-block-start: 0em !important;
-        margin-block-end: 0.2em !important;
+        margin-block-start: 0.2em;
+        margin-block-end: 0.2em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
       }
 
       div {
@@ -67,7 +69,7 @@
 
       /* LINK / URL COLOR! */
       a, a > code {
-        color: rgb(59, 90, 111);
+        color: rgb(249, 38, 114);
         text-decoration: none;
       }
 
@@ -157,7 +159,6 @@
         padding-top: 1em;
       }
 
-      /* IMAGE */
       /* Poner imagen redonda al 50% de su tamaño */
       .circle{
         display: block;
@@ -167,14 +168,6 @@
         width: 200px;
         height: 200px;
         border-radius: 50%;
-      }
-
-      .ssquare img{
-        height: 100px;
-      }
-
-      .ssquare img{
-        height: 250px;
       }
 
       .square img{
@@ -188,13 +181,11 @@
       .xxsquare img{
         height: 400px;
       }
-      /* END IMAGE */
 
-      /* LETTER / FONT SIZE */
       .xlarge { font-size: 150%; }
       .large { font-size: 130%; }
       .small { font-size: 70%; }
-      /* END - LETTER / FONT SIZE */
+
 
       /* TABLE */
       table{
@@ -219,7 +210,6 @@
         margin-right: 10px;
         margin-left: 10px;
       }
-      /* END TABLE */
 
     </style>
   </head>
@@ -234,24 +224,31 @@ class: center, middle
 
 # Índice
 .xlarge[
-
-- Introducción
-
-- Simuladores
-
-- MATLAB y ROS
-
-- Bibliografía
-
+1. Introducción
+2. Simuladores
+3. Prototipos RC
+4. MATLAB y ROS
 ]
 
 ---
 
-# Introducción
+# 1. Introducción
+**Nivel de automazación según Sociedad de Ingenieros de Automoción**
 
-Posible stack software de un coche autónomo
+.center.xxsquare[![](img/J3016-levels-of-automation-car.png)]
 
-.center.xsquare[![](img/Esquema_basico_componentes_software_coche_autonomo.png)]
+.small.footnote[Organización de estándares de los automóviles y otros]
+
+
+???
+
+---
+
+# 1. Introducción
+
+Stack software de un coche autónomo
+
+.center.square[![](img/Esquema_basico_componentes_software_coche_autonomo.png)]
 
 ???
 
@@ -259,9 +256,9 @@ Interés en el entorno estático
 
 ---
 
-# Introducción
+# 1. Introducción
 
-**Retos de un vehículo autónomo**:
+Retos:
 
 - Visión por computador
 
@@ -279,7 +276,7 @@ Interés en el entorno estático
 
 - Simulación
 
-**Partes de una simulación** (sistema multiagente):
+Partes de una simulación (sistema multiagente):
 
 - La simulación del vehículo
 
@@ -291,37 +288,16 @@ Interés en el entorno estático
 
 ---
 
-# Introducción
-##Campos interesantes de aplicación
+# 1. Introducción
+
 .center.xxsquare[![](img/Autonomous_car_data.png)]
 
-.small.footnote[4TB de información por día ¿Reducir la cantidad necesaria y tener las prestaciones similares?]
-
 ???
 
 Interés en el entorno estático
 
 ---
-
-# Introducción
-##Campos interesantes de aplicación
-
-**Comunicación V2X**
-
-.center.ssquare[![](img/v2x_com.png)]
-
-- **Vehículos** respaldados por **IoT** con **varios canales de comunicación conectados** entre
-diferentes entidades **"inteligentes"** dentro del entorno.
-
-- Una **simulación** podría incorporar los **diversos** tipos de **comunicación** disponibles para plataformas específicas basadas
-en sus capacidades y **modelar restricciones físicas** de la transmisión en el entorno.
-
-???
-
-Interés en el entorno estático
-
----
-# Simuladores
+# 2. Simuladores
 
 .large.center[
 
@@ -364,7 +340,7 @@ Por último, Ansys y Carsim son dos simuladores que destacan por su alto grado d
 
 ---
 
-# Simuladores
+# 2. Simuladores
 
 .large.center[
 
@@ -388,7 +364,7 @@ Microsoft AirSim<br>
 
 ---
 
-# Simuladores
+# 2. Simuladores
 
 .center.xlarge[
 
@@ -406,7 +382,7 @@ Todos ellos se caracterizan por ser Open-Source
 
 ---
 
-# Simuladores
+# 2. Simuladores
 ## [Apollo Simulation](https://apollo.auto/platform/simulation.html)
 
 Apollo Simulation permite a los usuarios agregar sus propios algoritmos para ciertos módulos. p. ej. planificación de movimiento.
@@ -430,7 +406,7 @@ Los usuarios pueden suscribirse a los mensajes publicados por el servicio de sim
 
 ---
 
-# Simuladores
+# 2. Simuladores
 ## [Apollo Simulation](https://apollo.auto/platform/simulation.html)
 - **Escenarios:** alrededor de 200 casos de uso o puedes diseñar tu propio caso de uso.
 
@@ -463,7 +439,7 @@ Sistema automatico de evaluación:
   * Detente en las señales de alto
 
 ---
-# Simuladores
+# 2. Simuladores
 ## [Autoware](https://www.autoware.org/)
 
 La **Fundación Autoware** es una organización sin fines de lucro que apoya proyectos de código abierto que permiten la movilidad autónoma.
@@ -485,7 +461,7 @@ La **Fundación Autoware** es una organización sin fines de lucro que apoya pro
 ]
 
 ---
-# Simuladores
+# 2. Simuladores
 ## [Autoware.AI](https://www.autoware.ai/) y [Autoware.Auto](https://www.autoware.auto/)
 
 Autoware.AI - **"todo en uno"** para la conducción autónoma.
@@ -501,7 +477,7 @@ Autoware.AI - **"todo en uno"** para la conducción autónoma.
 Todos estos elementos también los podemos encontrar en **.Auto**
 
 ---
-# Simuladores
+# 2. Simuladores
 ## [LGSVL Simulator](https://www.lgsvlsimulator.com/)
 
 LG Electronics America R&D Center ha desarrollado un simulador
@@ -526,7 +502,7 @@ de vehículos autónomos basado en Unity para desarrolladores de vehículos aut�
 ]
 
 ---
-# Simuladores
+# 2. Simuladores
 ## [CARLA](https://carla.org/)
 
 CARLA permite el desarrollo, la formación y la validación de sistemas de conducción autónomos.
@@ -557,7 +533,7 @@ Un asset es una representación de cualquier item que puede ser utilizado en su 
 Un asset podría venir de un archivo creado afuera de Unity, tal como un modelo 3D, un archivo de audio, una imagen, o cualquiera de los otros tipos de archivos que soporta el motor gráfico.
 
 ---
-# Simuladores
+# 2. Simuladores
 ## [Microsoft AirSim](https://microsoft.github.io/AirSim/)
 
 AirSim es un simulador de drones, automóviles y más, construido sobre Unreal Engine.
@@ -582,41 +558,51 @@ El objetivo de la plataforma es la investigación de algorimos de IA
 
 ---
 
-# MATLAB y ROS
+# Bibliografía
+.large[
 
-Dotar a MATLAB de un toolset específico desarrollado por nosotros para dar soporte a la
-infraestuctura software creada con ROS1 o ROS2.
+- The State of Modeling, Simulation, and Data Utilization within Industry - An Autonomous Vehicles Perspective by Joshua G Fadaie
 
-¿Porque usar ROS?
 
-- Porque hay mucho código ya realizado a nivel software y hardware que nos puede servir directamente
-o con pequeñas adaptaciones, además de ser código fácilmente portable a la plataforma de prueba experimental.
+.center[.square[![](img/Joshua_G_Fadaie.png)]]
 
-¿Tiene MATLAB soporte para ROS?
+]
 
-- Sí, tanto para ROS1 como ROS2.
-  * [Get Started with ROS](https://es.mathworks.com/help/ros/ug/get-started-with-ros.html)
-  * [Get Started with ROS 2](https://www.mathworks.com/help/ros/ug/get-started-with-ros-2.html)
+???
 
-Usar ROS como eje que vertebre el proyecto para así dotarlo de versatilidad para adaptarse a las diferentes
-plataformas existentes y por exister en el proyecto.
+Este paper es una sintesis de porque usar simuladores y un resumen de todos los simuladores existentes en el 2018.
 
 ---
 
 # Bibliografía
 .large[
 
-- The State of Modeling, Simulation, and Data Utilization within Industry - An Autonomous Vehicles Perspective by Joshua G Fadaie
 
 - A STUDY OF DRIVING SIMULATION PLATFORMS FOR AUTOMATED VEHICLES by Vaishakh Gopalakrishnan Nair
 
-- Geonovum and Geospatial. 2017. Self-Driving Vehicles [SDVS] & Geo-Information.
-
-- Espectro para Sistemas Inteligentes de Transporte. Posición sobre políticas públicas de la GSMA
+.center[.square[![](img/Vaishakh_Gopalakrishnan_Nair.png)]]
 
 ]
 
 ???
+
+Este paper da un visión más amplia de la tecnología y la industria en el mundo de los coche autónomos.
+
+---
+
+# Bibliografía
+.large[
+
+- Geonovum and Geospatial. 2017. Self-Driving Vehicles [SDVS] & Geo-Information.
+
+]
+
+???
+
+---
+
+# Enlaces de interés
+- [Curso gratuito autoware](https://www.apex.ai/autoware-course)
 
 ---
 
