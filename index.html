@@ -131,24 +131,22 @@
         border-radius: 50%;
       }
 
+      .square img{
+        height: 300px;
+      }
+
       .xlarge { font-size: 150%; }
       .large { font-size: 130%; }
       .small { font-size: 70%; }
 
-      .table-center {
-        width:100%;
-        height:100%;
-      }
-
-      table {
-        margin: 0 auto; /* or margin: 0 auto 0 auto */
+      .borders {
+        border: 1px solid black;
       }
 
     </style>
   </head>
   <body>
     <textarea id="source">
-
 class: center, middle
 
 ![](img/av.png)
@@ -171,25 +169,23 @@ class: center, middle
 # 2. Simuladores
 
 .large[
-.table-center[
+.center[
 
-|        |
-|:-----------------:|
-| Ansys VRXperience |
-| Apollo Simulation |
-|  Applied Intution |
-|      Autoware     |
-|       CARLA       |
-|      CarMaker     |
-|       Carsim      |
-|      Cognata      |
-|     EB robinos    |
-| LGSVL Simulator   |
-|      Metamoto     |
-|  Microsoft AirSim |
-| NVIDIA Driveworks |
-|      Prescan      |
-|       rFPro       |
+Ansys VRXperience<br>
+Apollo Simulation<br>
+Applied Intution<br>
+Autoware<br>
+CARLA<br>
+CarMaker<br>
+Carsim<br>
+Cognata<br>
+EB robinos<br>
+LGSVL Simulator<br>
+Metamoto<br>
+Microsoft AirSim<br>
+NVIDIA Driveworks<br>
+Prescan<br>
+rFPro
 
 ]
 ]
@@ -218,25 +214,23 @@ Por último, Ansys y Carsim son dos simuladores que destacan por su alto grado d
 # 2. Simuladores
 
 .large[
-.table-center[
+.center[
 
-|        |
-|:-----------------:|
-| ~~Ansys VRXperience~~ |
-| Apollo Simulation |
-|  ~~Applied Intution~~ |
-|      Autoware     |
-|       CARLA       |
-|      ~~CarMaker~~     |
-|       ~~Carsim~~     |
-|      ~~Cognata~~      |
-|     ~~EB robinos~~    |
-| LGSVL Simulator   |
-|      ~~Metamoto~~     |
-|  Microsoft AirSim |
-| ~~NVIDIA Driveworks~~ |
-|      ~~Prescan~~      |
-|       ~~rFPro~~       |
+~~Ansys VRXperience~~<br>
+Apollo Simulation<br>
+~~Applied Intution~~<br>
+Autoware<br>
+CARLA<br>
+~~CarMaker~~<br>
+~~Carsim~~<br>
+~~Cognata~~<br>
+~~EB robinos~~<br>
+LGSVL Simulator<br>
+~~Metamoto~~<br>
+Microsoft AirSim<br>
+~~NVIDIA Driveworks~~<br>
+~~Prescan~~<br>
+~~rFPro~~<br>
 
 ]
 ]
@@ -245,16 +239,14 @@ Por último, Ansys y Carsim son dos simuladores que destacan por su alto grado d
 
 # 2. Simuladores
 
-.table-center[
+.center[
 .xlarge[
 
-|        |
-|:-----------------:|
-| Apollo Simulation |
-|      Autoware     |
-|       CARLA       |
-| LGSVL Simulator   |
-|  Microsoft AirSim |
+Apollo Simulation<br>
+Autoware<br>
+CARLA<br>
+LGSVL Simulator<br>
+Microsoft AirSim<br>
 
 ]
 ]
@@ -266,26 +258,43 @@ Todos ellos se caracterizan por ser Open-Source
 ---
 
 # 2. Simuladores
-## Apollo Simulation
+## [Apollo Simulation](https://apollo.auto/platform/simulation.html)
+
+---
+# 2. Simuladores
+## [Autoware](https://www.autoware.org/)
+
+---
+# 2. Simuladores
+## [LGSVL Simulator](https://www.lgsvlsimulator.com/)
+
+---
+# 2. Simuladores
+## [CARLA](https://carla.org/)
+
+CARLA se ha desarrollado desde cero para respaldar el desarrollo, la formación y la validación de sistemas de conducción autónomos.
+
+Además del código y los protocolos Open-Source, CARLA proporciona assets digitales abiertos (diseños urbanos, edificios, vehículos)
+que se crearon para este propósito y se pueden utilizar libremente. La plataforma de simulación admite especificaciones flexibles
+de conjuntos de sensores, condiciones ambientales, control total de todos los actores estáticos y dinámicos, generación de mapas y mucho más.
+
+.borders[
+
+|             Soporte             |             |
+|:-------------------------------:|-------------|
+| Lenguajes de<br>programación    | C++, Python |
+| Robot Operating System<br>(ROS) | ROS1 Bridge |
+| MATLAB - Simulink               | No          |
+
+]
+
+???
+
 
 
 ---
 # 2. Simuladores
-## Autoware
-
-
----
-# 2. Simuladores
-## CARLA
-
----
-# 2. Simuladores
-## LGSVL Simulator
-
-
----
-# 2. Simuladores
-## Microsoft AirSim
+## [Microsoft AirSim](https://microsoft.github.io/AirSim/)
 
 ---
 
@@ -294,9 +303,28 @@ Todos ellos se caracterizan por ser Open-Source
 
 - The State of Modeling, Simulation, and Data Utilization within Industry - An Autonomous Vehicles Perspective by Joshua G Fadaie
 
-- A STUDY OF DRIVING SIMULATION PLATFORMS FOR AUTOMATED VEHICLES by Vaishakh Gopalakrishnan Nair
+.center[.square[![](img/Joshua_G_Fadaie.png)]]
 
 ]
+
+???
+
+Este paper es una sintesis de porque usar simuladores y un resumen de todos los simuladores existentes en el 2018.
+
+---
+
+# Bibliografía
+.large[
+
+- A STUDY OF DRIVING SIMULATION PLATFORMS FOR AUTOMATED VEHICLES by Vaishakh Gopalakrishnan Nair
+
+.center[.square[![](img/Vaishakh_Gopalakrishnan_Nair.png)]]
+
+]
+
+???
+
+Este paper da un visión más amplia de la tecnología y la industria en el mundo de los coche autonomos.
 ---
 
 
@@ -317,5 +345,49 @@ Rafael Carbonell Lázaro
     <script type="text/javascript">
       var slideshow = remark.create();
     </script>
+
+<!-- SLIDES CORNER LOGO -->
+    <style>
+    .logoRA {
+      background-image: url(img/marca_UPV_principal_negro300.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 181px;
+      height: 64px;
+      z-index: 0;
+    }
+    .logoRB {
+      background-image: url(img/marca_UPV_principal_negro300.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 5px;
+      right: 182px;
+      width: 181px;
+      height: 64px;
+      z-index: 0;
+    }
+    </style>
+
+    <script>
+    document
+      .querySelectorAll(
+        '.remark-slide-content' +
+        ':not(.title-slide)' +
+        // add additional classes to exclude here, e.g.
+        // ':not(.inverse)' +
+        ':not(.hide-logo)'
+      )
+      .forEach(el => {
+        el.innerHTML += '<div class="logoRA"></div>';
+        //el.innerHTML += '<div class="logoRB"></div>';
+      });
+    </script>
+<!-- SLIDES CORNER LOGO - END -->
+
+
   </body>
 </html>
